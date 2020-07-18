@@ -943,7 +943,7 @@ namespace mbit_Car {
         pins.digitalWritePin(DigitalPin.P9, 0);
         switch (value) {
             case enAvoidState.OBSTACLE: {
-                if (pins.analogReadPin(AnalogPin.P3) < 1600) {
+                if (pins.analogReadPin(AnalogPin.P3) < 800) {
                 
                     temp = true;
                     setPwm(8, 0, 0);
@@ -956,7 +956,7 @@ namespace mbit_Car {
             }
 
             case enAvoidState.NOOBSTACLE: {
-                if (pins.analogReadPin(AnalogPin.P3) > 1600) {
+                if (pins.analogReadPin(AnalogPin.P3) > 800) {
 
                     temp = true;
                     setPwm(8, 0, 4095);
