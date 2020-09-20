@@ -502,7 +502,168 @@ namespace mbit_Car {
         jump_up,
         jump_down,
         power_up,
-        power_down
+        power_down,
+        beiguozhichun
+    }
+    
+    enum Note {
+    //% blockIdentity=music.noteFrequency enumval=262
+    C = 262,
+    //% block=C#
+    //% blockIdentity=music.noteFrequency enumval=277
+    CSharp = 277,
+    //% blockIdentity=music.noteFrequency enumval=294
+    D = 294,
+    //% blockIdentity=music.noteFrequency enumval=311
+    Eb = 311,
+    //% blockIdentity=music.noteFrequency enumval=330
+    E = 330,
+    //% blockIdentity=music.noteFrequency enumval=349
+    F = 349,
+    //% block=F#
+    //% blockIdentity=music.noteFrequency enumval=370
+    FSharp = 370,
+    //% blockIdentity=music.noteFrequency enumval=392
+    G = 392,
+    //% block=G#
+    //% blockIdentity=music.noteFrequency enumval=415
+    GSharp = 415,
+    //% blockIdentity=music.noteFrequency enumval=440
+    A = 440,
+    //% blockIdentity=music.noteFrequency enumval=466
+    Bb = 466,
+    //% blockIdentity=music.noteFrequency enumval=494
+    B = 494,
+    //% blockIdentity=music.noteFrequency enumval=131
+    C3 = 131,
+    //% block=C#3
+    //% blockIdentity=music.noteFrequency enumval=139
+    CSharp3 = 139,
+    //% blockIdentity=music.noteFrequency enumval=147
+    D3 = 147,
+    //% blockIdentity=music.noteFrequency enumval=156
+    Eb3 = 156,
+    //% blockIdentity=music.noteFrequency enumval=165
+    E3 = 165,
+    //% blockIdentity=music.noteFrequency enumval=175
+    F3 = 175,
+    //% block=F#3
+    //% blockIdentity=music.noteFrequency enumval=185
+    FSharp3 = 185,
+    //% blockIdentity=music.noteFrequency enumval=196
+    G3 = 196,
+    //% block=G#3
+    //% blockIdentity=music.noteFrequency enumval=208
+    GSharp3 = 208,
+    //% blockIdentity=music.noteFrequency enumval=220
+    A3 = 220,
+    //% blockIdentity=music.noteFrequency enumval=233
+    Bb3 = 233,
+    //% blockIdentity=music.noteFrequency enumval=247
+    B3 = 247,
+    //% blockIdentity=music.noteFrequency enumval=262
+    C4 = 262,
+    //% block=C#4
+    //% blockIdentity=music.noteFrequency enumval=277
+    CSharp4 = 277,
+    //% blockIdentity=music.noteFrequency enumval=294
+    D4 = 294,
+    //% blockIdentity=music.noteFrequency enumval=311
+    Eb4 = 311,
+    //% blockIdentity=music.noteFrequency enumval=330
+    E4 = 330,
+    //% blockIdentity=music.noteFrequency enumval=349
+    F4 = 349,
+    //% block=F#4
+    //% blockIdentity=music.noteFrequency enumval=370
+    FSharp4 = 370,
+    //% blockIdentity=music.noteFrequency enumval=392
+    G4 = 392,
+    //% block=G#4
+    //% blockIdentity=music.noteFrequency enumval=415
+    GSharp4 = 415,
+    //% blockIdentity=music.noteFrequency enumval=440
+    A4 = 440,
+    //% blockIdentity=music.noteFrequency enumval=466
+    Bb4 = 466,
+    //% blockIdentity=music.noteFrequency enumval=494
+    B4 = 494,
+    //% blockIdentity=music.noteFrequency enumval=523
+    C5 = 523,
+    //% block=C#5
+    //% blockIdentity=music.noteFrequency enumval=555
+    CSharp5 = 555,
+    //% blockIdentity=music.noteFrequency enumval=587
+    D5 = 587,
+    //% blockIdentity=music.noteFrequency enumval=622
+    Eb5 = 622,
+    //% blockIdentity=music.noteFrequency enumval=659
+    E5 = 659,
+    //% blockIdentity=music.noteFrequency enumval=698
+    F5 = 698,
+    //% block=F#5
+    //% blockIdentity=music.noteFrequency enumval=740
+    FSharp5 = 740,
+    //% blockIdentity=music.noteFrequency enumval=784
+    G5 = 784,
+    //% block=G#5
+    //% blockIdentity=music.noteFrequency enumval=831
+    GSharp5 = 831,
+    //% blockIdentity=music.noteFrequency enumval=880
+    A5 = 880,
+    //% blockIdentity=music.noteFrequency enumval=932
+    Bb5 = 932,
+    //% blockIdentity=music.noteFrequency enumval=988
+    B5 = 988,
+}
+
+    export function getCarMelody(melody: Melodies): string[] {
+        switch (melody) {
+            case enMusic.dadadadum:
+                return ['r4:2', 'g', 'g', 'g', 'eb:8', 'r:2', 'f', 'f', 'f', 'd:8'];
+            case enMusic.entertainer:
+                return ['d4:1', 'd#', 'e', 'c5:2', 'e4:1', 'c5:2', 'e4:1', 'c5:3', 'c:1', 'd', 'd#', 'e', 'c', 'd', 'e:2', 'b4:1', 'd5:2', 'c:4'];
+            case enMusic.prelude:
+                return ['c4:1', 'e', 'g', 'c5', 'e', 'g4', 'c5', 'e', 'c4', 'e', 'g', 'c5', 'e', 'g4', 'c5', 'e', 'c4', 'd', 'g', 'd5', 'f', 'g4', 'd5', 'f', 'c4', 'd', 'g', 'd5', 'f', 'g4', 'd5', 'f', 'b3', 'd4', 'g', 'd5', 'f', 'g4', 'd5', 'f', 'b3', 'd4', 'g', 'd5', 'f', 'g4', 'd5', 'f', 'c4', 'e', 'g', 'c5', 'e', 'g4', 'c5', 'e', 'c4', 'e', 'g', 'c5', 'e', 'g4', 'c5', 'e'];
+            case enMusic.ode:
+                return ['e4', 'e', 'f', 'g', 'g', 'f', 'e', 'd', 'c', 'c', 'd', 'e', 'e:6', 'd:2', 'd:8', 'e:4', 'e', 'f', 'g', 'g', 'f', 'e', 'd', 'c', 'c', 'd', 'e', 'd:6', 'c:2', 'c:8'];
+            case enMusic.nyan:
+                return ['f#5:2', 'g#', 'c#:1', 'd#:2', 'b4:1', 'd5:1', 'c#', 'b4:2', 'b', 'c#5', 'd', 'd:1', 'c#', 'b4:1', 'c#5:1', 'd#', 'f#', 'g#', 'd#', 'f#', 'c#', 'd', 'b4', 'c#5', 'b4', 'd#5:2', 'f#', 'g#:1', 'd#', 'f#', 'c#', 'd#', 'b4', 'd5', 'd#', 'd', 'c#', 'b4', 'c#5', 'd:2', 'b4:1', 'c#5', 'd#', 'f#', 'c#', 'd', 'c#', 'b4', 'c#5:2', 'b4', 'c#5', 'b4', 'f#:1', 'g#', 'b:2', 'f#:1', 'g#', 'b', 'c#5', 'd#', 'b4', 'e5', 'd#', 'e', 'f#', 'b4:2', 'b', 'f#:1', 'g#', 'b', 'f#', 'e5', 'd#', 'c#', 'b4', 'f#', 'd#', 'e', 'f#', 'b:2', 'f#:1', 'g#', 'b:2', 'f#:1', 'g#', 'b', 'b', 'c#5', 'd#', 'b4', 'f#', 'g#', 'f#', 'b:2', 'b:1', 'a#', 'b', 'f#', 'g#', 'b', 'e5', 'd#', 'e', 'f#', 'b4:2', 'c#5'];
+            case enMusic.ringtone:
+                return ['c4:1', 'd', 'e:2', 'g', 'd:1', 'e', 'f:2', 'a', 'e:1', 'f', 'g:2', 'b', 'c5:4'];
+            case enMusic.funk:
+                return ['c2:2', 'c', 'd#', 'c:1', 'f:2', 'c:1', 'f:2', 'f#', 'g', 'c', 'c', 'g', 'c:1', 'f#:2', 'c:1', 'f#:2', 'f', 'd#'];
+            case enMusic.blues:
+                return ['c2:2', 'e', 'g', 'a', 'a#', 'a', 'g', 'e', 'c2:2', 'e', 'g', 'a', 'a#', 'a', 'g', 'e', 'f', 'a', 'c3', 'd', 'd#', 'd', 'c', 'a2', 'c2:2', 'e', 'g', 'a', 'a#', 'a', 'g', 'e', 'g', 'b', 'd3', 'f', 'f2', 'a', 'c3', 'd#', 'c2:2', 'e', 'g', 'e', 'g', 'f', 'e', 'd'];
+            case enMusic.birthday:
+                return ['c4:3', 'c:1', 'd:4', 'c:4', 'f', 'e:8', 'c:3', 'c:1', 'd:4', 'c:4', 'g', 'f:8', 'c:3', 'c:1', 'c5:4', 'a4', 'f', 'e', 'd', 'a#:3', 'a#:1', 'a:4', 'f', 'g', 'f:8'];
+            case enMusic.wedding:
+                return ['c4:4', 'f:3', 'f:1', 'f:8', 'c:4', 'g:3', 'e:1', 'f:8', 'c:4', 'f:3', 'a:1', 'c5:4', 'a4:3', 'f:1', 'f:4', 'e:3', 'f:1', 'g:8'];
+            case enMusic.funeral:
+                return ['c3:4', 'c:3', 'c:1', 'c:4', 'd#:3', 'd:1', 'd:3', 'c:1', 'c:3', 'b2:1', 'c3:4'];
+            case enMusic.punchline:
+                return ['c4:3', 'g3:1', 'f#', 'g', 'g#:3', 'g', 'r', 'b', 'c4'];
+            case enMusic.baddy:
+                return ['c3:3', 'r', 'd:2', 'd#', 'r', 'c', 'r', 'f#:8'];
+            case enMusic.chase:
+                return ['a4:1', 'b', 'c5', 'b4', 'a:2', 'r', 'a:1', 'b', 'c5', 'b4', 'a:2', 'r', 'a:2', 'e5', 'd#', 'e', 'f', 'e', 'd#', 'e', 'b4:1', 'c5', 'd', 'c', 'b4:2', 'r', 'b:1', 'c5', 'd', 'c', 'b4:2', 'r', 'b:2', 'e5', 'd#', 'e', 'f', 'e', 'd#', 'e'];
+            case enMusic.baDing:
+                return ['b5:1', 'e6:3'];
+            case enMusic.wawawawaa:
+                return ['e3:3', 'r:1', 'd#:3', 'r:1', 'd:4', 'r:1', 'c#:8'];
+            case enMusic.jumpUp:
+                return ['c5:1', 'd', 'e', 'f', 'g'];
+            case enMusic.jumpDown:
+                return ['g5:1', 'f', 'e', 'd', 'c'];
+            case enMusic.powerUp:
+                return ['g4:1', 'c5', 'e', 'g:2', 'e:1', 'g:3'];
+            case enMusic.powerDown:
+                return ['g5:1', 'd#', 'c', 'g4:2', 'b:1', 'c5:3'];
+            case enMusic.beiguozhichun:
+                return ['g5:1', 'd#', 'c', 'g4:2', 'b:1', 'c5:3'];
+            default:
+                return [];
+        }
     }
     export enum enPos {
 
@@ -895,27 +1056,32 @@ namespace mbit_Car {
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function Music_Car(index: enMusic): void {
         switch (index) {
-            case enMusic.dadadum: music.beginMelody(music.builtInMelody(Melodies.Dadadadum), MelodyOptions.Once); break;
-            case enMusic.birthday: music.beginMelody(music.builtInMelody(Melodies.Birthday), MelodyOptions.Once); break;
-            case enMusic.entertainer: music.beginMelody(music.builtInMelody(Melodies.Entertainer), MelodyOptions.Once); break;
-            case enMusic.prelude: music.beginMelody(music.builtInMelody(Melodies.Prelude), MelodyOptions.Once); break;
-            case enMusic.ode: music.beginMelody(music.builtInMelody(Melodies.Ode), MelodyOptions.Once); break;
-            case enMusic.nyan: music.beginMelody(music.builtInMelody(Melodies.Nyan), MelodyOptions.Once); break;
-            case enMusic.ringtone: music.beginMelody(music.builtInMelody(Melodies.Ringtone), MelodyOptions.Once); break;
-            case enMusic.funk: music.beginMelody(music.builtInMelody(Melodies.Funk), MelodyOptions.Once); break;
-            case enMusic.blues: music.beginMelody(music.builtInMelody(Melodies.Blues), MelodyOptions.Once); break;
-            case enMusic.wedding: music.beginMelody(music.builtInMelody(Melodies.Wedding), MelodyOptions.Once); break;
-            case enMusic.funereal: music.beginMelody(music.builtInMelody(Melodies.Funeral), MelodyOptions.Once); break;
-            case enMusic.punchline: music.beginMelody(music.builtInMelody(Melodies.Punchline), MelodyOptions.Once); break;
-            case enMusic.baddy: music.beginMelody(music.builtInMelody(Melodies.Baddy), MelodyOptions.Once); break;
-            case enMusic.chase: music.beginMelody(music.builtInMelody(Melodies.Chase), MelodyOptions.Once); break;
-            case enMusic.ba_ding: music.beginMelody(music.builtInMelody(Melodies.BaDing), MelodyOptions.Once); break;
-            case enMusic.wawawawaa: music.beginMelody(music.builtInMelody(Melodies.Wawawawaa), MelodyOptions.Once); break;
-            case enMusic.jump_up: music.beginMelody(music.builtInMelody(Melodies.JumpUp), MelodyOptions.Once); break;
-            case enMusic.jump_down: music.beginMelody(music.builtInMelody(Melodies.JumpDown), MelodyOptions.Once); break;
-            case enMusic.power_up: music.beginMelody(music.builtInMelody(Melodies.PowerUp), MelodyOptions.Once); break;
-            case enMusic.power_down: music.beginMelody(music.builtInMelody(Melodies.PowerDown), MelodyOptions.Once); break;
+            case enMusic.dadadum: music.beginMelody(getCarMelody(enMusic.dadadadum), MelodyOptions.Once); break;
+            case enMusic.birthday: music.beginMelody(getCarMelody(enMusic.birthday), MelodyOptions.Once); break;
+            case enMusic.entertainer: music.beginMelody(getCarMelody(enMusic.entertainer), MelodyOptions.Once); break;
+            case enMusic.prelude: music.beginMelody(getCarMelody(enMusic.prelude), MelodyOptions.Once); break;
+            case enMusic.ode: music.beginMelody(getCarMelody(enMusic.ode), MelodyOptions.Once); break;
+            case enMusic.nyan: music.beginMelody(getCarMelody(enMusic.nyan), MelodyOptions.Once); break;
+            case enMusic.ringtone: music.beginMelody(getCarMelody(enMusic.ringtone), MelodyOptions.Once); break;
+            case enMusic.funk: music.beginMelody(getCarMelody(enMusic.funk), MelodyOptions.Once); break;
+            case enMusic.blues: music.beginMelody(getCarMelody(enMusic.blues), MelodyOptions.Once); break;
+            case enMusic.wedding: music.beginMelody(getCarMelody(enMusic.wedding), MelodyOptions.Once); break;
+            case enMusic.funereal: music.beginMelody(getCarMelody(enMusic.funeral), MelodyOptions.Once); break;
+            case enMusic.punchline: music.beginMelody(getCarMelody(enMusic.punchline), MelodyOptions.Once); break;
+            case enMusic.baddy: music.beginMelody(getCarMelody(enMusic.baddy), MelodyOptions.Once); break;
+            case enMusic.chase: music.beginMelody(getCarMelody(enMusic.chase), MelodyOptions.Once); break;
+            case enMusic.ba_ding: music.beginMelody(getCarMelody(enMusic.baDing), MelodyOptions.Once); break;
+            case enMusic.wawawawaa: music.beginMelody(getCarMelody(enMusic.wawawawaa), MelodyOptions.Once); break;
+            case enMusic.jump_up: music.beginMelody(getCarMelody(enMusic.jumpUp), MelodyOptions.Once); break;
+            case enMusic.jump_down: music.beginMelody(getCarMelody(enMusic.jumpDown), MelodyOptions.Once); break;
+            case enMusic.power_up: music.beginMelody(getCarMelody(enMusic.powerUp), MelodyOptions.Once); break;
+            case enMusic.power_down: music.beginMelody(getCarMelody(enMusic.powerDown), MelodyOptions.Once); break;
+            case enMusic.beiguozhichun: music.beginMelody(getCarMelody(enMusic.beiguozhichun), MelodyOptions.Once); break;
         }
+    }
+    
+    //self defined melodies
+    export function getMelody(melody: Melodies): string[] {
     }
     //% blockId=mbit_Servo_Car block="Servo_Car|num %num|value %value"
     //% weight=96
