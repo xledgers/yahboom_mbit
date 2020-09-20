@@ -1099,7 +1099,7 @@ namespace mbit_Car {
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function Music_Car(index: enMusic): void {
         switch (index) {
-            case enMusic.dadadum: music.beginMelody(getCarMelody(enMusic.dadadum), MelodyOptions.Once); break;
+            case enMusic.dadadadum: music.beginMelody(getCarMelody(enMusic.dadadum), MelodyOptions.Once); break;
             case enMusic.birthday: music.beginMelody(getCarMelody(enMusic.birthday), MelodyOptions.Once); break;
             case enMusic.entertainer: music.beginMelody(getCarMelody(enMusic.entertainer), MelodyOptions.Once); break;
             case enMusic.prelude: music.beginMelody(getCarMelody(enMusic.prelude), MelodyOptions.Once); break;
@@ -1109,23 +1109,20 @@ namespace mbit_Car {
             case enMusic.funk: music.beginMelody(getCarMelody(enMusic.funk), MelodyOptions.Once); break;
             case enMusic.blues: music.beginMelody(getCarMelody(enMusic.blues), MelodyOptions.Once); break;
             case enMusic.wedding: music.beginMelody(getCarMelody(enMusic.wedding), MelodyOptions.Once); break;
-            case enMusic.funereal: music.beginMelody(getCarMelody(enMusic.funereal), MelodyOptions.Once); break;
+            case enMusic.funeral: music.beginMelody(getCarMelody(enMusic.funereal), MelodyOptions.Once); break;
             case enMusic.punchline: music.beginMelody(getCarMelody(enMusic.punchline), MelodyOptions.Once); break;
             case enMusic.baddy: music.beginMelody(getCarMelody(enMusic.baddy), MelodyOptions.Once); break;
             case enMusic.chase: music.beginMelody(getCarMelody(enMusic.chase), MelodyOptions.Once); break;
-            case enMusic.ba_ding: music.beginMelody(getCarMelody(enMusic.ba_ding), MelodyOptions.Once); break;
+            case enMusic.baDing: music.beginMelody(getCarMelody(enMusic.ba_ding), MelodyOptions.Once); break;
             case enMusic.wawawawaa: music.beginMelody(getCarMelody(enMusic.wawawawaa), MelodyOptions.Once); break;
-            case enMusic.jump_up: music.beginMelody(getCarMelody(enMusic.jump_up), MelodyOptions.Once); break;
-            case enMusic.jump_down: music.beginMelody(getCarMelody(enMusic.jump_down), MelodyOptions.Once); break;
-            case enMusic.power_up: music.beginMelody(getCarMelody(enMusic.power_up), MelodyOptions.Once); break;
-            case enMusic.power_down: music.beginMelody(getCarMelody(enMusic.power_down), MelodyOptions.Once); break;
-            case enMusic.beiguozhichun: music.beginMelody(getCarMelody(enMusic.beiguozhichun), MelodyOptions.Once); break;
+            case enMusic.jumpUp: music.beginMelody(getCarMelody(enMusic.jump_up), MelodyOptions.Once); break;
+            case enMusic.jumpDown: music.beginMelody(getCarMelody(enMusic.jump_down), MelodyOptions.Once); break;
+            case enMusic.powerUp: music.beginMelody(getCarMelody(enMusic.power_up), MelodyOptions.Once); break;
+            case enMusic.powerDown: music.beginMelody(getCarMelody(enMusic.power_down), MelodyOptions.Once); break;
+            case enMusic.beiGuoZhiChun: music.beginMelody(getCarMelody(enMusic.beiguozhichun), MelodyOptions.Once); break;
         }
     }
-    
-    //self defined melodies
-    export function getMelody(melody: Melodies): string[] {
-    }
+
     //% blockId=mbit_Servo_Car block="Servo_Car|num %num|value %value"
     //% weight=96
     //% blockGap=10
