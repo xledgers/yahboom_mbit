@@ -1122,10 +1122,7 @@ namespace mbit_Car {
             case enMusic.beiGuoZhiChun: music.beginMelody(getCarMelody(enMusic.beiguozhichun), MelodyOptions.Once); break;
         }
     }
-    
-    //self defined melodies
-    export function getMelody(melody: Melodies): string[] {
-    }
+
     //% blockId=mbit_Servo_Car block="Servo_Car|num %num|value %value"
     //% weight=96
     //% blockGap=10
