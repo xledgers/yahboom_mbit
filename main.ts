@@ -526,7 +526,7 @@ namespace mbit_Car {
 } */
     export enum enMusic {
 
-        dadadum = Melodies.Dadadadum,
+        dadadadum = Melodies.Dadadadum,
         entertainer = Melodies.Entertainer,
         prelude= Melodies.Prelude,
         ode= Melodies.Ode,
@@ -534,20 +534,19 @@ namespace mbit_Car {
         ringtone= Melodies.Ringtone,
         funk= Melodies.Funk,
         blues= Melodies.Blues,
-
         birthday= Melodies.Birthday,
         wedding= Melodies.Wedding,
-        funereal= Melodies.Funereal,
+        funeral= Melodies.Funeral,
         punchline= Melodies.Punchline,
         baddy= Melodies.Baddy,
         chase= Melodies.Chase,
-        ba_ding= Melodies.Ba_ding,
+        baDing= Melodies.BaDing,
         wawawawaa= Melodies.Wawawawaa,
-        jump_up= Melodies.JumpUp,
-        jump_down= Melodies.JumpDown,
-        power_up= Melodies.PowerUp,
-        power_down= Melodies.PowerDown,
-        beiguozhichun =101
+        jumpUp= Melodies.JumpUp,
+        jumpDown= Melodies.JumpDown,
+        powerUp= Melodies.PowerUp,
+        powerDown= Melodies.PowerDown,
+        beiGuoZhiChun =101
     }
     
     enum Note {
@@ -661,7 +660,7 @@ namespace mbit_Car {
     B5 = 988,
 }
 
-    export function getCarMelody(melody: Melodies): string[] {
+    export function getCarMelody(melody: enMusic): string[] {
         switch (melody) {
             case enMusic.dadadadum:
                 return ['r4:2', 'g', 'g', 'g', 'eb:8', 'r:2', 'f', 'f', 'f', 'd:8'];
@@ -703,7 +702,7 @@ namespace mbit_Car {
                 return ['g4:1', 'c5', 'e', 'g:2', 'e:1', 'g:3'];
             case enMusic.powerDown:
                 return ['g5:1', 'd#', 'c', 'g4:2', 'b:1', 'c5:3'];
-            case enMusic.beiguozhichun:
+            case enMusic.beiGuoZhiChun:
                 return ['g5:1', 'd#', 'c', 'g4:2', 'b:1', 'c5:3'];
             default:
                 return [];
