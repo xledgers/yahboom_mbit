@@ -480,30 +480,74 @@ namespace mbit_Car {
         Yellow,
 
     }
+    
+    /***************
+    enum Melodies {
+    //% block="dadadum" blockIdentity=music.builtInMelody
+    Dadadadum = 0,
+    //% block="entertainer" blockIdentity=music.builtInMelody
+    Entertainer,
+    //% block="prelude" blockIdentity=music.builtInMelody
+    Prelude,
+    //% block="ode" blockIdentity=music.builtInMelody
+    Ode,
+    //% block="nyan" blockIdentity=music.builtInMelody
+    Nyan,
+    //% block="ringtone" blockIdentity=music.builtInMelody
+    Ringtone,
+    //% block="funk" blockIdentity=music.builtInMelody
+    Funk,
+    //% block="blues" blockIdentity=music.builtInMelody
+    Blues,
+    //% block="birthday" blockIdentity=music.builtInMelody
+    Birthday,
+    //% block="wedding" blockIdentity=music.builtInMelody
+    Wedding,
+    //% block="funeral" blockIdentity=music.builtInMelody
+    Funeral,
+    //% block="punchline" blockIdentity=music.builtInMelody
+    Punchline,
+    //% block="baddy" blockIdentity=music.builtInMelody
+    Baddy,
+    //% block="chase" blockIdentity=music.builtInMelody
+    Chase,
+    //% block="ba ding" blockIdentity=music.builtInMelody
+    BaDing,
+    //% block="wawawawaa" blockIdentity=music.builtInMelody
+    Wawawawaa,
+    //% block="jump up" blockIdentity=music.builtInMelody
+    JumpUp,
+    //% block="jump down" blockIdentity=music.builtInMelody
+    JumpDown,
+    //% block="power up" blockIdentity=music.builtInMelody
+    PowerUp,
+    //% block="power down" blockIdentity=music.builtInMelody
+    PowerDown,
+} */
     export enum enMusic {
 
-        dadadum = 0,
-        entertainer,
-        prelude,
-        ode,
-        nyan,
-        ringtone,
-        funk,
-        blues,
+        dadadum = Melodies.Dadadadum,
+        entertainer = Melodies.Entertainer,
+        prelude= Melodies.Prelude,
+        ode= Melodies.Ode,
+        nyan= Melodies.Nyan,
+        ringtone= Melodies.Ringtone,
+        funk= Melodies.Funk,
+        blues= Melodies.Blues,
 
-        birthday,
-        wedding,
-        funereal,
-        punchline,
-        baddy,
-        chase,
-        ba_ding,
-        wawawawaa,
-        jump_up,
-        jump_down,
-        power_up,
-        power_down,
-        beiguozhichun
+        birthday= Melodies.Birthday,
+        wedding= Melodies.Wedding,
+        funereal= Melodies.Funereal,
+        punchline= Melodies.Punchline,
+        baddy= Melodies.Baddy,
+        chase= Melodies.Chase,
+        ba_ding= Melodies.Ba_ding,
+        wawawawaa= Melodies.Wawawawaa,
+        jump_up= Melodies.JumpUp,
+        jump_down= Melodies.JumpDown,
+        power_up= Melodies.PowerUp,
+        power_down= Melodies.PowerDown,
+        beiguozhichun =101
     }
     
     enum Note {
@@ -1056,7 +1100,7 @@ namespace mbit_Car {
     //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
     export function Music_Car(index: enMusic): void {
         switch (index) {
-            case enMusic.dadadum: music.beginMelody(getCarMelody(enMusic.dadadadum), MelodyOptions.Once); break;
+            case enMusic.dadadum: music.beginMelody(getCarMelody(enMusic.dadadum), MelodyOptions.Once); break;
             case enMusic.birthday: music.beginMelody(getCarMelody(enMusic.birthday), MelodyOptions.Once); break;
             case enMusic.entertainer: music.beginMelody(getCarMelody(enMusic.entertainer), MelodyOptions.Once); break;
             case enMusic.prelude: music.beginMelody(getCarMelody(enMusic.prelude), MelodyOptions.Once); break;
@@ -1066,16 +1110,16 @@ namespace mbit_Car {
             case enMusic.funk: music.beginMelody(getCarMelody(enMusic.funk), MelodyOptions.Once); break;
             case enMusic.blues: music.beginMelody(getCarMelody(enMusic.blues), MelodyOptions.Once); break;
             case enMusic.wedding: music.beginMelody(getCarMelody(enMusic.wedding), MelodyOptions.Once); break;
-            case enMusic.funereal: music.beginMelody(getCarMelody(enMusic.funeral), MelodyOptions.Once); break;
+            case enMusic.funereal: music.beginMelody(getCarMelody(enMusic.funereal), MelodyOptions.Once); break;
             case enMusic.punchline: music.beginMelody(getCarMelody(enMusic.punchline), MelodyOptions.Once); break;
             case enMusic.baddy: music.beginMelody(getCarMelody(enMusic.baddy), MelodyOptions.Once); break;
             case enMusic.chase: music.beginMelody(getCarMelody(enMusic.chase), MelodyOptions.Once); break;
-            case enMusic.ba_ding: music.beginMelody(getCarMelody(enMusic.baDing), MelodyOptions.Once); break;
+            case enMusic.ba_ding: music.beginMelody(getCarMelody(enMusic.ba_ding), MelodyOptions.Once); break;
             case enMusic.wawawawaa: music.beginMelody(getCarMelody(enMusic.wawawawaa), MelodyOptions.Once); break;
-            case enMusic.jump_up: music.beginMelody(getCarMelody(enMusic.jumpUp), MelodyOptions.Once); break;
-            case enMusic.jump_down: music.beginMelody(getCarMelody(enMusic.jumpDown), MelodyOptions.Once); break;
-            case enMusic.power_up: music.beginMelody(getCarMelody(enMusic.powerUp), MelodyOptions.Once); break;
-            case enMusic.power_down: music.beginMelody(getCarMelody(enMusic.powerDown), MelodyOptions.Once); break;
+            case enMusic.jump_up: music.beginMelody(getCarMelody(enMusic.jump_up), MelodyOptions.Once); break;
+            case enMusic.jump_down: music.beginMelody(getCarMelody(enMusic.jump_down), MelodyOptions.Once); break;
+            case enMusic.power_up: music.beginMelody(getCarMelody(enMusic.power_up), MelodyOptions.Once); break;
+            case enMusic.power_down: music.beginMelody(getCarMelody(enMusic.power_down), MelodyOptions.Once); break;
             case enMusic.beiguozhichun: music.beginMelody(getCarMelody(enMusic.beiguozhichun), MelodyOptions.Once); break;
         }
     }
