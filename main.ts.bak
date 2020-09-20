@@ -702,7 +702,7 @@ namespace mbit_Car {
                 return ['g4:1', 'c5', 'e', 'g:2', 'e:1', 'g:3'];
             case enMusic.powerDown:
                 return ['g5:1', 'd#', 'c', 'g4:2', 'b:1', 'c5:3'];
-            case enMusic.beiguozhichun:
+            case enMusic.beiGuoZhiChun:
                 return ['g5:1', 'd#', 'c', 'g4:2', 'b:1', 'c5:3'];
             default:
                 return [];
